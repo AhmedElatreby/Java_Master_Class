@@ -2,10 +2,9 @@ package org.javaMasterClass;
 
 public class Methods {
 
-    public static void addTwoNumbers(int num1, int num2) {
+    private static int addTwoNumbers(int num1, int num2) {
         int result = num1 + num2;
-        System.out.println("Num1 + Num2 = " + result);
-
+        return result;
     }
 
     public static void negate(int num){
@@ -22,7 +21,8 @@ public class Methods {
     public static void main(String[] args) {
         System.out.println("Exercise 1\n" +
                 "Write a method which takes two numbers as arguments and prints their sum to the terminal.");
-        addTwoNumbers(55, 684);
+        int result = addTwoNumbers(55, 22);
+        System.out.println(result);
 
         System.out.println();
         System.out.println("Exercise 2\n" +
