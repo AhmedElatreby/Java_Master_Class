@@ -20,16 +20,16 @@ public class ArraysConditionalsandMethods {
     }
 
     static String longestString(String[] strings) {
-        String longesString = "";
+        String longestString = "";
         String output = "";
         for (String string : strings) {
-            if (string.length() > longesString.length()) {
-                longesString = string;
+            if (string.length() > longestString.length()) {
+                longestString = string;
                 output = string;
                 continue;
             }
-            if (string.length() == longesString.length()) {
-                longesString = string;
+            if (string.length() == longestString.length()) {
+                longestString = string;
                 output += ", " + string;
             }
         }
