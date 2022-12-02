@@ -1,5 +1,7 @@
 package org.javaMasterClass;
 
+import java.util.Arrays;
+
 public class Methods {
 
     private static double rental(double rent, double property) {
@@ -38,6 +40,15 @@ public class Methods {
         String remaining = input.substring(1);
         input = firstLetter + remaining;
         System.out.println(input);
+    }
+
+    private static void numberOfItems(String[] input){
+        System.out.println(input.length);
+    }
+
+    private static void numberOfWord(String input){
+        String items = String.valueOf(input.split(" ").length);
+        System.out.println( "\"" + input +"\"" + " has "+ items + " words");
     }
 
     public static void main(String[] args) {
@@ -79,6 +90,18 @@ public class Methods {
                 "Investigate how to split the first letter from the string, capitalize that, then join the pieces back together");
 
         capitalizesFirstLetter("hello");
+
+        System.out.println();
+        System.out.println("Exercise 6\n" +
+                "Write a method which takes an array of strings as an argument and returns the number of items in the array.");
+
+        numberOfItems(new String[]{"Hi", "How", "are", "you", "?"});
+
+        System.out.println();
+        System.out.println("Exercise 7\n" +
+                "Write a method which takes a sentence as an argument," +
+                " counts the number of words in the array and prints \"The sentence contains X words\".");
+        numberOfWord("hello how you doing");
     }
 
 
