@@ -1,8 +1,5 @@
 package org.javaMasterClass;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class ArraysConditionalsandMethods {
     static String reverse(String s) {
         for (int i = s.length() - 1; i >= 0; i--) {
@@ -22,13 +19,21 @@ public class ArraysConditionalsandMethods {
         System.out.println(letter + word);
     }
 
-    static void findLongestString(String[] s){
-
-        for (int i = 0; i < s[i].length(); i++) {
-            String number = String.valueOf(s[i].length());
-            System.out.println(number);
+    static String longestString(String[] strings) {
+        String longesString = "";
+        String output = "";
+        for (String string : strings) {
+            if (string.length() > longesString.length()) {
+                longesString = string;
+                output = string;
+                continue;
+            }
+            if (string.length() == longesString.length()) {
+                longesString = string;
+                output += ", " + string;
+            }
         }
-
+        return output;
     }
 
     public static void main(String[] args) {
@@ -61,7 +66,8 @@ public class ArraysConditionalsandMethods {
             i.e. ["hello", "bingo", "ola", "bye", "ciao"] -> hello, bingo
         */
 
-        findLongestString(new String[]{"hello", "bingo", "ola", "bye", "ciao"});
+        String str = longestString(new String[]{"hello", "bingo", "ola", "bye", "ciao"});
+        System.out.println(str);
 
     }
 }
