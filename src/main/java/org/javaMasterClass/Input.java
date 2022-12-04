@@ -1,6 +1,7 @@
 package org.javaMasterClass;
 
 import java.io.FileNotFoundException;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Input {
@@ -44,7 +45,19 @@ public class Input {
                 "    Create a method to check if number is prime then use against the input\n" +
                 "*/");
 
-        primeNumber();
+        //primeNumber();
+
+        System.out.println();
+        System.out.println("Exercise 4\n" +
+                "/*\n" +
+                "    Write a method that displays random joke to the user.\n" +
+                "    Your program should stop displaying jokes when use inputs no.\n" +
+                "    For e.g\n" +
+                "    Want to hear a joke? Yes/No\n" +
+                "        if yes then display joke and repeat same question\n" +
+                "        if no then program should exit\n" +
+                "*/");
+        randomJoke();
 
 
     }
@@ -65,12 +78,37 @@ public class Input {
         System.out.println("Please enter a number between 1 and 100");
         Scanner scan = new Scanner(System.in);
         int num = scan.nextInt();
-        for (int i = 2; i <= num / 2; i++) {
-            if (i % i==0 ) {
+        for (int i = 2; i < num; i++) {
+            if (num % i==0 ) {
                 System.out.println( num +" not a primer number");
                 break;
             } else {
                 System.out.println(num +" is a prime number.");
+            }
+        }
+    }
+    private static void randomJoke(){
+        Random random = new Random();
+        String[] jokes = {"Did you hear about the mathematician who’s afraid of negative numbers?\n" +
+                "He’ll stop at nothing to avoid them.", "Knock! Knock!\n" +
+                "Who’s there?\n" +
+                "Control Freak.\n" +
+                "Con…\n" +
+                "OK, now you say, `Control Freak who?` ", "Hear about the new restaurant called Karma?\n" +
+                "There’s no menu: You get what you deserve", "Did you hear about the actor who fell through the floorboards?\n" +
+                "He was just going through a stage", "Did you hear about the claustrophobic astronaut?\n" +
+                "He just needed a little space."};
+        int randomNumber = random.nextInt(jokes.length);
+        Scanner scan = new Scanner(System.in);
+        while (true){
+            System.out.println("Want to hear a joke? Yes/No");
+            String input = scan.next();
+            if (input.equalsIgnoreCase("Yes")) {
+                System.out.println(jokes[randomNumber]);
+                continue;
+            } else if (input.equalsIgnoreCase("No")){
+                System.out.println("Thank you :-)");
+                break;
             }
         }
     }
