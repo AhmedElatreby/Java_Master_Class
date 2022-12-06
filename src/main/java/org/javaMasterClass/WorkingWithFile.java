@@ -1,15 +1,29 @@
 package org.javaMasterClass;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.util.Scanner;
 
 public class WorkingWithFile {
     public static void main(String[] args) {
         File file = createFile("src/text.txt");
         writeFile(file, true);
+        try {
+            readFile(file);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
 
+    }
+
+    private static void readFile(File file) throws FileNotFoundException {
+        try {
+            Scanner scaner = new Scanner(file);
+            while (scaner.hasNext()) {
+                System.out.println(scaner.nextLine());
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     private static File createFile(String path) {
@@ -27,15 +41,14 @@ public class WorkingWithFile {
     }
 
     private static void writeFile(File file, boolean append) {
-        try {
-            FileWriter fileWriter = new FileWriter(file,append);
-            PrintWriter writer = new PrintWriter(fileWriter);
+        try (
+                FileWriter fileWriter = new FileWriter(file, append);
+                PrintWriter writer = new PrintWriter(fileWriter);
+        ) {
             writer.println("This is a test");
-            writer.flush();
-            writer.close();
-//            write.write(d);
         } catch (IOException e) {
-            e.getMessage();
+
+            System.out.println( e.getMessage());
         }
 
     }
