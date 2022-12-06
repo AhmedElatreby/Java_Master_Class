@@ -67,9 +67,10 @@ public class Conditionals {
         System.out.println("Question 7");
         // create a String variable and assign it a value
         String str3 = "hello";
+        String letter = String.valueOf(str3.charAt(0));
         // create an `if` statement which grabs the first letter of your word and compares it against a Character value
         // print something to the console if the condition is met
-        if (str3.charAt(0) != 'H') {
+        if (letter.equalsIgnoreCase("H")) {
             System.out.println("They not the same!");
         }
 
