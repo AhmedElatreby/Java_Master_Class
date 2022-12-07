@@ -16,13 +16,15 @@ public class WorkingWithFile {
     }
 
     private static void readFile(File file) throws FileNotFoundException {
+        Scanner scanner =null;
         try {
-            Scanner scaner = new Scanner(file);
-            while (scaner.hasNext()) {
-                System.out.println(scaner.nextLine());
-            }
+            scanner = new Scanner(file);
         } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
+            throw new RuntimeException(e);
+            }
+        scanner.nextLine();
+        while (scanner.hasNext()) {
+            System.out.println(scanner.nextLine());
         }
     }
 
@@ -69,6 +71,7 @@ public class WorkingWithFile {
     19,Clevie,Sifflett,csiffletti@furl.net,M
     20,Gretchen,Abell,gabellj@1688.com,F
 """};
+
             String str = Arrays.toString(data); // convert array into string
 
             writer.println((str)); // print array to the CLI
