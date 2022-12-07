@@ -1,4 +1,4 @@
-package classesNobjects.person;
+package classesNobjects.objects.car;
 
 public enum CarBrand {
     BMW,

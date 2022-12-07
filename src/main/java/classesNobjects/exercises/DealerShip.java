@@ -6,11 +6,20 @@ public class DealerShip {
     private String name;
     private int maxCarsOnDisplay;
     private int carsInStock;
+    private Car[] cars;
 
-    public DealerShip(String name, int maxCarsOnDisplay, int carsInStock) {
+    public static int count = 0;
+
+    public DealerShip(String name, int maxCarsOnDisplay, int carsInStock, Car[] cars) {
         this.name = name;
         this.maxCarsOnDisplay = maxCarsOnDisplay;
         this.carsInStock = carsInStock;
+        this.cars = new Car[carsInStock];
+    }
+
+    {
+        count++;
+
     }
 
     public DealerShip(String name, int maxCarsOnDisplay) {
@@ -18,20 +27,7 @@ public class DealerShip {
         this.maxCarsOnDisplay = maxCarsOnDisplay;
     }
 
-    public int countCarsInStock() {
-        System.out.println("number cars in the dealership: " + carsInStock);
-        return carsInStock;
-    }
 
-    public void addCarToDealership(Car[] car){
-
-
-        for (int i = 0; i < car.length; i++) {
-            car[i] = new Car();
-        }
-
-
-    }
 
     public String getName() {
         return name;
@@ -49,12 +45,11 @@ public class DealerShip {
         this.maxCarsOnDisplay = maxCarsOnDisplay;
     }
 
-    public int getCarsInStock() {
-        return carsInStock;
-    }
 
-    public void setCarsInStock(int carsInStock) {
+
+    public char[] setCarsInStock(int carsInStock) {
         this.carsInStock = carsInStock;
+        return new char[0];
     }
 
     @Override

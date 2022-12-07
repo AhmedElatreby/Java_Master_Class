@@ -1,4 +1,7 @@
-package classesNobjects.person;
+package classesNobjects.objects.person;
+
+import classesNobjects.objects.car.Car;
+import classesNobjects.objects.car.CarBrand;
 
 import java.math.BigDecimal;
 
@@ -11,6 +14,8 @@ public class Main {
         Car[] cars = {bmw, vw};
 
         Person alex = new Person("John", "Smith",Gender.MALE, 41, address, cars);
+
+        car.a
 
         System.out.println(alex);
 

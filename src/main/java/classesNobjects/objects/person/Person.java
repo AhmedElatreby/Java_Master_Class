@@ -1,4 +1,6 @@
-package classesNobjects.person;
+package classesNobjects.objects.person;
+
+import classesNobjects.objects.car.Car;
 
 import java.util.Arrays;
 import java.util.Objects;

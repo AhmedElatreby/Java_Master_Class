@@ -23,6 +23,7 @@ public class Car {
 
     }
 
+
     public Manufacture getManufacture() {
         return manufacture;
     }

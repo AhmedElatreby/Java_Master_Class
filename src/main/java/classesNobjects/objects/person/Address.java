@@ -1,4 +1,4 @@
-package classesNobjects.person;
+package classesNobjects.objects.person;
 
 import java.util.Objects;
 
