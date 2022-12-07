@@ -1,4 +1,4 @@
-package person;
+package classesNobjects.person;
 
 import java.util.Arrays;
 import java.util.Objects;

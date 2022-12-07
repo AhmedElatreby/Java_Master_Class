@@ -1,4 +1,4 @@
-package person;
+package classesNobjects.person;
 
 public enum Gender {
     MALE,
