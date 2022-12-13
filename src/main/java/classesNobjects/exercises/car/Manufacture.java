@@ -1,4 +1,4 @@
-package classesNobjects.exercises;
+package classesNobjects.exercises.car;
 
 public enum Manufacture {
     AUDI,

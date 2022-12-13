@@ -1,19 +1,21 @@
 package classesNobjects.objects.car;
 
-import classesNobjects.exercises.DealerShip;
+import classesNobjects.exercises.dealer.DealerShip;
 
 public class CarService {
-    public boolean addCar(Car car, DealerShip dealerShip){
+    private DealerShip dealerShip;
+
+    public boolean addCar(Car car){
         if (car == null) {
             throw new IllegalArgumentException("Car cannot be null");
         }
         int count = 0;
-        for (int c = 0; c < dealerShip.getMaxCarsOnDisplay(); c++) {
+        for (int c = 0; c < dealerShip.getCapacity(); c++) {
             if (c != count) {
                 count++;
             }
         }
-        if(count >= dealerShip.getMaxCarsOnDisplay()){
+        if(count >= dealerShip.getCapacity()){
             return false;
         }
 

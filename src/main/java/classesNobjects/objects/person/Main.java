@@ -15,7 +15,6 @@ public class Main {
 
         Person alex = new Person("John", "Smith",Gender.MALE, 41, address, cars);
 
-        car.a
 
         System.out.println(alex);
 

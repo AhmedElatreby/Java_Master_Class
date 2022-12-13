@@ -1,10 +1,12 @@
-package classesNobjects.exercises;
+package classesNobjects.exercises.car;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
 
 
-public class Car {
+public class Car implements Serializable {
+    private String regNumber;
     private Manufacture manufacture;
     private EngineType engineType;
     private double engineSize;
@@ -23,6 +25,13 @@ public class Car {
 
     }
 
+    public String getRegNumber() {
+        return regNumber;
+    }
+
+    public void setRegNumber(String regNumber) {
+        this.regNumber = regNumber;
+    }
 
     public Manufacture getManufacture() {
         return manufacture;
@@ -65,6 +74,19 @@ public class Car {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return Double.compare(car.engineSize, engineSize) == 0 && numberOfDoors == car.numberOfDoors && Objects.equals(regNumber, car.regNumber) && manufacture == car.manufacture && engineType == car.engineType && Objects.equals(price, car.price);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(regNumber, manufacture, engineType, engineSize, numberOfDoors, price);
+    }
+
+    @Override
     public String toString() {
         return "Car{" +
                 "manufacture=" + manufacture +
@@ -75,16 +97,4 @@ public class Car {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Car car = (Car) o;
-        return Double.compare(car.engineSize, engineSize) == 0 && numberOfDoors == car.numberOfDoors && manufacture == car.manufacture && engineType == car.engineType && Objects.equals(price, car.price);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(manufacture, engineType, engineSize, numberOfDoors, price);
-    }
 }
