@@ -16,4 +16,8 @@ public class CarDAO {
         cars[nextAvailableSlot] = car;
         ++nextAvailableSlot;
     }
+
+    public Car[] selectAllCars() {
+        return  cars;
+    }
 }

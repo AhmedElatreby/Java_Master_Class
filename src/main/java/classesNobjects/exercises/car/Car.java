@@ -21,9 +21,19 @@ public class Car implements Serializable {
         this.price = price;
     }
 
+    public Car(String regNumber, Manufacture manufacture, EngineType engineType, double engineSize, int numberOfDoors, BigDecimal price) {
+        this.regNumber = regNumber;
+        this.manufacture = manufacture;
+        this.engineType = engineType;
+        this.engineSize = engineSize;
+        this.numberOfDoors = numberOfDoors;
+        this.price = price;
+    }
+
     public Car() {
 
     }
+
 
     public String getRegNumber() {
         return regNumber;
