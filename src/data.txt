@@ -1,0 +1,12 @@
+# This file contains all kinds of data
+
+Ahmed
+Shahd
+Jana
+Sarah
+Yesmine
+07512369845
+ahmed@ahmed.com
+shahd@shahd.com
+012025874586
+

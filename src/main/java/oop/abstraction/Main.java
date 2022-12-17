@@ -1,11 +1,21 @@
 package oop.abstraction;
 
-public class Main {
-    public static void main(String[] args) {
-        Animal dog = new Dog("Foo");
-        Animal cat = new Cat("Bar");
+import java.io.FileNotFoundException;
 
-        dog.makeSound();
-        cat.makeSound();
+public class Main {
+    public static void main(String[] args) throws Exception{
+
+        String path = "src/data.txt";
+        new NumberExtractorReport().
+                prepareAndSendReport(path);
+
+        System.out.println();
+        System.out.println("---------");
+        System.out.println();
+
+        new EmailExtractorReport().
+                prepareAndSendReport(path);
+
+
     }
 }
