@@ -14,6 +14,9 @@ public class Main {
             System.out.println(vehicle.getCurrentSpeed());
             System.out.println();
         }
+        System.out.println("Purchase rate " + Vehicle.PURCHASE_RATE);
+
+        System.out.println("Current speed in Km is " + car.milesToKm());
 
     }
 }
