@@ -20,5 +20,6 @@ public class WorkingWithStacks {
         // to delete the top number of the stack we use pop
         System.out.println("delete the top number of the stack " + stack.pop());
         System.out.println("The number of the stack " + stack.size());
+        System.out.println("Check if the stack if empty or not: " + stack.isEmpty());
     }
 }
