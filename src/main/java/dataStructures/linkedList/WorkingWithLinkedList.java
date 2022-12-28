@@ -30,4 +30,8 @@ public class WorkingWithLinkedList {
     public record Person(String name, int age) {
 
     }
+    public static int squareNumber(int num) {
+        return (int) Math.pow(num,2);
+
+    }
 }
