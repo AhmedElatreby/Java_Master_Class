@@ -13,3 +13,12 @@
 - String input = "   amig os cod e  "
 - Write a method that transforms input into: Amigoscode
 ```
+
+* Exercise 3
+```text
+Write a method that finds the longest string in any given array.
+    i.e. [] -> ""
+    i.e. ["hello", "ola", "bye", "ciao"] -> hello
+    i.e. ["hello", "hello", "ola", "bye", "ciao"] -> hello
+    i.e. ["hello", "bingo", "ola", "bye", "ciao"] -> hello, bingo
+```

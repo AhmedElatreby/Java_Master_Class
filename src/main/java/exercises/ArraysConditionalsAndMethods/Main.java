@@ -5,8 +5,11 @@ public class Main {
         String myString = "Hello";
         String str = "   amig os cod e  ";
         trimStr(str);
-
         reverse(myString);
+        System.out.println();
+        String[] myString1 = {"hello",  "ola", "bye", "ciao"};
+
+        longestString(myString1);
 
     }
 
@@ -28,6 +31,23 @@ public class Main {
         letter = letter.toUpperCase();
         System.out.println(letter + word);
 
+    }
+
+    static String longestString(String[] strings) {
+        String longestString = "";
+        String output = "";
+        for (String string : strings) {
+            if (string.length() > longestString.length()) {
+                longestString = string;
+                output = string;
+                continue;
+            }
+            if (string.length() == longestString.length()) {
+                longestString = string;
+                output += "," + string;
+            }
+        }
+        return output;
     }
 
 
