@@ -7,9 +7,9 @@ public class Main {
         trimStr(str);
         reverse(myString);
         System.out.println();
-        String[] myString1 = {"hello",  "ola", "bye", "ciao"};
+        String[] myString1 = {"hello", "bingo", "ola", "bye", "ciao"};
 
-        longestString(myString1);
+        System.out.println(longestString(myString1));
 
     }
 
